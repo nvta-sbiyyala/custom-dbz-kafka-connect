@@ -9,19 +9,6 @@ It decorates out-of-box `debezium-connect` to:
 
 From project root:
 ```bash
-$ ./gradlew build
+$ ./gradlew :clean :uberJar
 $ docker build -t dbz-custom-connect:1.0 . 
 ```
-
-## Issues
-1. Currently the `Kotlin` `transformer` fails to work, complaining about:
-```bash
-Caused by: java.lang.ClassNotFoundException: kotlin.TypeCastException
-	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
-	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:104)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-```  
-The `java` version of the Transformer is included temporarily (that works) 
-
-Actively fixing..
