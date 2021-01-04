@@ -1,2 +1,2 @@
-rootProject.name = "kafka-connect-jdbc-es"
+rootProject.name = "custom-dbz-kafka-connect"
 
